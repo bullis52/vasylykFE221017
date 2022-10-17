@@ -10,13 +10,12 @@ function App() {
     const image4 = require('./assets/dyno.jpg');
     const image5 = require('./assets/planets.jpg');
     const img = [image1,image2,image3,image4,image5]
-    const [images, setImages] = useState<any>(img)
+    const [images, setImages] = useState<any>([image1,image2,image3,image4,image5])
 
     const color = ['#DFFF00','#FF7F50','#FFBF00','#DE3163','#9FE2BF','#40E0D0','#6495ED','#CCCCFF','#CD5C5C','#FF33FC']
 
     const randomizeImages = () => {
-        const newImg = randomizeArray(img)
-        setImages(newImg)
+        setImages(randomizeArray(img))
     }
 
     return (
